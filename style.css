@@ -6,31 +6,14 @@ body {
     background-color: #f4f4f4;
     line-height: 1.6;
     color: #333;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(30px); /* Slide in from below */
-    transition: opacity 1s ease, transform 1s ease;
 }
 
-body.loaded {
-    opacity: 1;
-    transform: translateY(0); /* Slide to original position */
-}
-
-/* Header Styling */
 header {
     background-color: #222;
     color: #fff;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(-30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-header.loaded {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 header .logo-container {
@@ -66,14 +49,6 @@ nav ul {
     padding: 10px;
     background-color: #333;
     margin: 0;
-    opacity: 0;
-    transform: translateY(-30px);
-    transition: opacity 1s ease 0.2s, transform 1s ease 0.2s;
-}
-
-nav ul.loaded {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 nav ul li {
@@ -112,14 +87,6 @@ nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease 0.4s, transform 1s ease 0.4s;
-}
-
-.container.loaded {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .container p {
@@ -133,14 +100,6 @@ section {
     padding: 50px 0;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease 0.6s, transform 1s ease 0.6s;
-}
-
-section.loaded {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 section h2 {
@@ -159,7 +118,6 @@ section h2::after {
     position: absolute;
     left: 50%;
     bottom: -10px;
-    transform: translateX(-50%);
 }
 
 /* Skills List */
@@ -201,14 +159,6 @@ footer {
     bottom: 0;
     width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease 0.8s, transform 1s ease 0.8s;
-}
-
-footer.loaded {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 footer p {
@@ -249,8 +199,4 @@ footer p a:hover {
 p {
     color: gray;
     transition: color 0.5s; /* Smooth transition for the color change */
-}
-
-p:hover {
-    color: white; /* Change color to bright white on hover */
 }
