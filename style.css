@@ -3,17 +3,16 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    line-height: 1.6;
+    background: linear-gradient(135deg, #e8eaf6, #f4f4f4); /* Light gradient background */
     color: #333;
 }
 
 header {
-    background-color: #222;
+    background: linear-gradient(120deg, #222, #444); /* Gradient background for header */
     color: #fff;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
 }
 
 header .logo-container {
@@ -27,11 +26,6 @@ header .logo-container {
     width: 120px;
     height: auto;
     margin-bottom: 10px;
-    transition: transform 0.5s;
-}
-
-#logo:hover {
-    transform: rotate(360deg);
 }
 
 .subtitle {
@@ -39,6 +33,7 @@ header .logo-container {
     font-size: 1.1rem;
     letter-spacing: 1.5px;
     color: #ccc;
+    text-transform: uppercase;
 }
 
 /* Navigation Styling */
@@ -47,8 +42,9 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 10px;
-    background-color: #333;
+    background: linear-gradient(120deg, #333, #555); /* Gradient background for nav */
     margin: 0;
+    border-radius: 30px;
 }
 
 nav ul li {
@@ -61,24 +57,13 @@ nav ul li a {
     font-weight: 600;
     padding: 10px 15px;
     border-radius: 25px;
-    transition: background-color 0.4s, color 0.4s;
+    transition: 0.5s;
 }
 
 nav ul li a:hover {
-    background-color: #fff;
-    color: #333;
-}
-
-/* Responsive Menu for Mobile */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        padding: 20px;
-    }
-    
-    nav ul li {
-        margin-bottom: 10px;
-    }
+    background-color: #ff9800;
+    color: #fff;
+    transition: 0.5s;
 }
 
 /* Container */
@@ -99,7 +84,9 @@ nav ul li a:hover {
 section {
     padding: 50px 0;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+    border-radius: 15px; /* Rounded corners */
+    margin-bottom: 40px; /* Spacing between sections */
 }
 
 section h2 {
@@ -108,6 +95,10 @@ section h2 {
     margin-bottom: 30px;
     color: #444;
     position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    transition: 0.5s;
 }
 
 section h2::after {
@@ -115,9 +106,12 @@ section h2::after {
     width: 80px;
     height: 4px;
     background-color: #ff9800;
+    transition: 0.5s;
     position: absolute;
     left: 50%;
     bottom: -10px;
+    transform: translateX(-50%);
+    border-radius: 2px; /* Rounded accent */
 }
 
 /* Skills List */
@@ -136,17 +130,32 @@ section h2::after {
     flex: 1;
     min-width: 150px;
     text-align: center;
-    background-color: #f9f9f9;
+    background: #f9f9f9; /* Subtle background */
     border-radius: 10px;
     margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s, background-color 0.4s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* More shadow for depth */
+    position: relative;
+    overflow: hidden;
+    transition: 0.9s;
+
+}
+
+
+.skills-list li::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150%;
+    height: 150%;
+    background: rgba(255, 152, 0, 0.2);
+    transform: rotate(45deg);
+    transition: 0.9s;
 }
 
 .skills-list li:hover {
     background-color: #ff9800;
     color: #fff;
-    transform: translateY(-10px);
 }
 
 /* Footer */
@@ -170,33 +179,13 @@ footer p {
 footer p a {
     color: #ff9800;
     text-decoration: none;
-    transition: color 0.3s;
 }
 
 footer p a:hover {
     color: #fff;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    header .logo-container {
-        flex-direction: column;
-    }
-    
-    .skills-list {
-        flex-direction: column;
-    }
-
-    .skills-list li {
-        min-width: auto;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-}
-
+/* Additional paragraph styling */
 p {
-    color: gray;
-    transition: color 0.5s; /* Smooth transition for the color change */
+    color: #777;
 }
