@@ -62,6 +62,53 @@ nav ul li a:hover {
     color: #f39c12;
 }
 
+.about-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Professional styling for the image */
+.about-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    margin-top: 30px;
+    border: 5px solid #ddd; /* Subtle border */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    transition: all 0.4s ease-in-out; /* Smooth transition */
+}
+
+/* Professional hover effect */
+.about-image:hover {
+    transform: scale(1.15); /* Slight zoom on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Larger shadow on hover */
+    border-color: #007bff; /* Change border color on hover */
+    filter: brightness(105%); /* Slightly increase brightness on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+    }
+}
+
 /* Section Titles */
 section h2 {
     font-size: 2.5rem;
