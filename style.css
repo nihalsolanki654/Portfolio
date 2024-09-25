@@ -98,48 +98,72 @@ section h2 {
 .skills-list {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     flex-wrap: wrap;
     padding-top: 20px;
 }
 
 .skills-list li {
-    display: inline-block;
-    margin: 10px;
     position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Tooltip hover effect */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-radius: 20%; /* Circular shape */
+    background-color: #fff; /* White background */
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+}
+
+.tooltip:hover {
+    transform: scale(1.1); /* Slight zoom-in effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
 
 .tooltip img {
-    width: 100px;
-    height: 100px;
-    transition: transform 0.3s ease;
+    width: 40px; /* Icon size */
+    height: 40px;
 }
 
-.tooltip img:hover {
-    transform: scale(1.1);
-}
-
-/* Tooltip */
-.tooltip .tooltiptext {
+/* Tooltip hover text below the icon */
+.tooltiptext {
     visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
     position: absolute;
-    bottom: 125%;
     left: 50%;
-    margin-left: -60px;
+    bottom: -40px; /* Position text below the icon */
+    transform: translateX(-50%);
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
+
+/* Custom styles for hover text */
+.tooltiptext {
+    font-size: 1.1rem; /* Slightly larger font size */
+    color: #f39c12;    /* Nice color for hover text */
+}
+
+/* Responsive Design for mobile view */
+@media (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
 
 /* Projects Section */
 #projects {
